@@ -1,37 +1,31 @@
-// function App() {
-//   const saludo = "Hola React"
-//   const alumnos = [ "Mike", "Robert", "Susan"]
-//   return (
-//     <div>
-//        <p> {saludo}</p>
 
-//        <ul>
-//         {
-//           alumnos.map(alumno => <li> {alumno}</li>)
-//         }
-//        </ul>
-//     </div>
-//   );
-// }
+import React from 'react';
+import Header from "./components/header/Header";
+import Home from "./pages/Home/Home";
+import Favoritos from "./pages/Favoritos/Favoritos";
+import Populares from "./pages/Populares/Populares";
+import Cartelera from "./pages/Cartelera/Cartelera";
+import Footer from "./components/footer/Footer"
+import { Switch, Route} from 'react-router-dom';
 
-// export default App;
 
 function App() {
-  const nombre = "Victoria"
-  const peliculas = [ "The Last Song", "Avatar", "Cars"]
+  
   return (
-    <div>
-       <h1> Mi primera app en react</h1>
-       <img src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" />
-       <p> Mi nombre es {nombre} </p>
-
-       <h2> Las ultimas 3 peliculas que vi son: </h2>
-       <ul>
-        {
-          peliculas.map(pelicula => <li> {pelicula}</li>)
-        }
-       </ul>
-    </div>
+    <>
+        <Header/>
+        <main>
+          <Switch>
+            <Route exact path= "/" component={ Home }/>
+            <Route exact path= "/favoritos" component={ Favoritos }/>
+            <Route exact path= "/populares" component={ Populares }/>
+            <Route exact path= "/cartelera" component={ Cartelera }/>
+        
+          </Switch>
+        </main>
+        <Footer />
+      
+    </>
   );
 }
 
