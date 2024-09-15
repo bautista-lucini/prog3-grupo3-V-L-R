@@ -1,0 +1,12 @@
+footer{
+    background-color: silver;
+    height: 8vh;
+    margin-top:5%;
+}
+
+.footer-container{
+
+    list-style: none;
+    padding-right: 12px;
+    color: silver;
+}
