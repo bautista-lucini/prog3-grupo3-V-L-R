@@ -7,6 +7,7 @@ import Populares from "./pages/Populares/Populares";
 import Cartelera from "./pages/Cartelera/Cartelera";
 import Footer from "./components/Footer/Footer"
 import { Switch, Route} from 'react-router-dom';
+import ResultadosBuscador from './pages/ResultadosBuscador';
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         <main>
           <Switch>
             <Route exact path= "/" component={ Home }/>
-            <Route exact path= "/favoritos" component={ Favoritos }/>        
+            <Route path= "/favoritos" component={ Favoritos }/>
+            <Route path= "/search" component={ ResultadosBuscador }/>
           </Switch>
         </main>
         
