@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import {Component} from "react";
+
 
 class Buscador extends Component {
     constructor(props){
@@ -20,6 +22,14 @@ class Buscador extends Component {
        })
     }
 
+
+    render(){
+        return(
+            <form onSubmit= {(e)=> this.evitarRecarga(e)}>
+                <input onChange={(e)=>this.guardarCambios(e)} type="text" name="usuario" value={this.state.value}></input>
+            </form>
+        )
+    }
     
 
 }
