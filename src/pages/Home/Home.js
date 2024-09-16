@@ -1,13 +1,15 @@
 import React from 'react'
 import "./Home.css"
-import FormularioBusqueda from '../../components/FormularioBusqueda/FormularioBusqueda'
+import Buscador from '../../components/buscador/Buscador'
+import ComponenteHome from "../../components/ComponenteHome/ComponenteHome"
 
 const Home = () => {
   return (
     <>
       <h1> Películas </h1>
       <main>
-        <FormularioBusqueda/>
+        <Buscador/>
+        <ComponenteHome/>
       </main>
     </>
   )
