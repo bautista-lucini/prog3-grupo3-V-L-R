@@ -7,7 +7,11 @@ export class ResultadosBuscador extends Component {
         
     }
     componentDidMount(){
-        console.log("val",this.props.location.state.query)
+        //fetch
+        fetch ("compeltar")
+        .then()
+        .then()
+        .catch()
     }
   
     render() {
@@ -17,4 +21,4 @@ export class ResultadosBuscador extends Component {
   }
 }
 
-export default ResultadosBuscador
+export default ResultadosBuscador;
