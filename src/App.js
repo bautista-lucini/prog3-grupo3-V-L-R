@@ -1,10 +1,9 @@
-
 import React from 'react';
 import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
-import Favoritos from "./pages/Favoritos/Favoritos";
-import Populares from "./pages/Populares/Populares";
-import Cartelera from "./pages/Cartelera/Cartelera";
+import Home from "./pages/Home";
+import Favoritos from "./pages/Favoritos";
+import Populares from "./pages/Populares";
+import Cartelera from "./pages/Cartelera";
 import Footer from "./components/Footer/Footer"
 import { Switch, Route} from 'react-router-dom';
 import ResultadosBuscador from './pages/ResultadosBuscador';

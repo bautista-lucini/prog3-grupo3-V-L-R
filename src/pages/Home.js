@@ -1,8 +1,8 @@
 import React from 'react'
+import "../App.css"
 
-import "./Home.css"
-import Buscador from '../../components/buscador/Buscador'
-import ComponenteHome from "../../components/ComponenteHome/ComponenteHome"
+import Buscador from '../components/buscador/Buscador'
+import ComponenteHome from "../components/ComponenteHome/ComponenteHome"
 
 const Home = (props) => {
   return (
