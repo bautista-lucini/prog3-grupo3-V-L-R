@@ -50,7 +50,7 @@ render(){
          <h2 className="">Peliculas en cartelera</h2>
          <section  className="">
             {
-                this.state.arrayCartelera.map((unaPeliCarte, idx)=> <Cartelera key={unaPeliCarte.name + idx} datosCartelera={unaPeliCarte}/>)
+                this.state.arrayCartelera.map((unaPeliCarte, idx)=> <MovieCard key={unaPeliCarte.name + idx} datos={unaPeliCarte}/>)
             }
          </section>
         </>
