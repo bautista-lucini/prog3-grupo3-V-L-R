@@ -44,7 +44,7 @@ render(){
         <h1 className="titulo">Peliculas Populares</h1>
         <section className="">
         {
-            this.state.arrayPopulares.map((unaPeli, idx)=> <Populares key={unaPeli.name + idx} datosPopulares={unaPeli}/>)
+            this.state.arrayPopulares.map((unaPeli, idx)=> <MovieCard key={unaPeli.name + idx} datos={unaPeli}/>)
         }
         </section>
          <h2 className="">Peliculas en cartelera</h2>
