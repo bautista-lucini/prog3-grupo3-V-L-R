@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Populares from "../Populares/Populares"
-import Cartelera from "../Cartelera/Cartelera"
+import Populares from "../Populares/Populares";
+import Cartelera from "../Cartelera/Cartelera";
+import MovieCard from "../MovieCard/MovieCard";
 
 // Grid para cartelera 
 //Css
