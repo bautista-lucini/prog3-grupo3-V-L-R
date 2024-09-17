@@ -12,7 +12,7 @@ export class ResultadosBuscador extends Component {
     }
     componentDidMount(){
         //fetch
-        fetch ("compeltar")
+        fetch (`https://api.themoviedb.org/3/search/movie?query=${this.props.location.state.query}&api_key=8dea26e2efdb41e19def66c4e41362a9&include_adult=false&language=en-US&page=1`)
             .then((response) => response.json())
             .then((data) => this.setState({resultado: data.results, cargando: false}))
             .catch((error) => console.log(error))
