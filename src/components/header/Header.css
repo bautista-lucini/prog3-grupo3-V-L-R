@@ -2,9 +2,8 @@ nav{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     padding: 0 20px;
-    background-color: rgb(169, 166, 166);
+    background-color: rgb(106, 129, 129);
     color: #fff
 }
 
@@ -25,12 +24,8 @@ nav{
 }
 h1 {
     font-weight: 400;
-}
-
-h1,
-main {
     padding: 0 30px;
-    text-align: center;
+
 }
 
 div ul {
@@ -38,8 +33,18 @@ div ul {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    
 }
+div a:hover{
+    font-weight: bold;
+    color:#ccb8d5
+ }
 
 .main-header li:first-child {
     font-weight: bold;
 }
+
+.logo{
+    margin: 3px;
+}
+
