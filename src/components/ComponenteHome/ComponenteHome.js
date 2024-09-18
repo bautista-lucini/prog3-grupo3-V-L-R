@@ -42,7 +42,7 @@ class ComponenteHome extends Component {
 render(){
     return(
         <>
-        <h1 className="titulo">Peliculas Populares</h1>
+        <h2 className="titulo">Peliculas Populares</h2>
         <section className="containerPeliculas">
         {
             this.state.arrayPopulares.map((unaPeli, idx)=> <MovieCard key={unaPeli.name + idx} datos={unaPeli}/>)

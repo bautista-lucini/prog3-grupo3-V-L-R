@@ -1,5 +1,7 @@
 import { Component } from 'react';
 import MovieCard from '../components/MovieCard/MovieCard'; 
+import "../components/ComponenteHome/ComponenteHome.css"
+
 
 class Favoritos extends Component {
   constructor(props) {
@@ -18,11 +20,13 @@ class Favoritos extends Component {
 
       Promise.all(
         parsedArray.map((id) => 
-          fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=YOUR_API_KEY&language=en-US`) 
+          fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=8dea26e2efdb41e19def66c4e41362a9&language=en-US
+`) 
             .then(response => response.json())
         )
       )
       .then((movies) => {
+        console.log(movies); 
         this.setState({
           movies: movies, 
           isLoading: false 
@@ -41,7 +45,7 @@ class Favoritos extends Component {
 
   render() {
     return (
-      <div>
+      <div className='containerPeliculas'>
         {!this.state.isLoading ? (
           <section className="gridFavoritos">
             {this.state.movies.length > 0 ? (

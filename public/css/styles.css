@@ -14,5 +14,10 @@ a {
 body {
     font-family: Nunito;
     margin: 0;
-    background-color: #eee;
+    background-color: #262525;
+    color: white;
+}
+
+h3{
+    border-bottom: 3px solid #c4ff61;
 }

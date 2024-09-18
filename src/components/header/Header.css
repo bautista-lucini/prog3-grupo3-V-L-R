@@ -3,8 +3,8 @@ nav{
     flex-direction: row;
     flex-wrap: wrap;
     padding: 0 20px;
-    background-color: rgb(106, 129, 129);
-    color: #fff
+    background-color: #a7fb17;
+    color: #fff;
 }
 
 .main-header li, 

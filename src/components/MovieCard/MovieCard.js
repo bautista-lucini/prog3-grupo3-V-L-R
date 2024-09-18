@@ -15,7 +15,7 @@ class MovieCard extends Component {
         return (
             <article className="pelicula">
 
-                <h2>{this.props.datos.title}</h2>
+                <h3>{this.props.datos.title}</h3>
                 <img src={`https://image.tmdb.org/t/p/w342/${this.props.datos.poster_path}`} alt="" />
                 {
                     this.state.oculta ?
@@ -25,7 +25,9 @@ class MovieCard extends Component {
                 <button onClick={() => {this.setState({oculta : !this.state.oculta})}}> 
                     Ver descripción
                 </button>
-                <Link to={`/peliculas/detallePelicula/id/${this.props.datos.id}`}> Ir al detalle </Link>
+                <Link to={`/peliculas/detallePelicula/id/${this.props.datos.id}`}>  
+                <button> Ir al detalle </button>
+                </Link>
                 <Favoritos  movie={this.props.datos} />
             </article>
         )
