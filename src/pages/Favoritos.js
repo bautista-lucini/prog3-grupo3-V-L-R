@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Movie from '../components/MovieCard/MovieCard';
+import MovieCard from '../components/MovieCard/MovieCard'; 
 
 class Favoritos extends Component {
   constructor(props) {
@@ -18,7 +18,7 @@ class Favoritos extends Component {
 
       Promise.all(
         parsedArray.map((id) => 
-          fetch(`https://api.themoviedb.org/3/movie/${id}?language=en-US`) 
+          fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=YOUR_API_KEY&language=en-US`) 
             .then(response => response.json())
         )
       )
@@ -43,16 +43,12 @@ class Favoritos extends Component {
     return (
       <div>
         {!this.state.isLoading ? (
-          <section className="gridFavortios">
-          
+          <section className="gridFavoritos">
             {this.state.movies.length > 0 ? (
               this.state.movies.map((movie) => (
-                <Movie
+                <MovieCard
                   key={movie.id}
-                  title={movie.original_title}
-                  desc={movie.overview}
-                  img={movie.poster_path}
-                  id={movie.id}
+                  datos={movie} // Cambié title, desc, img e id por datos
                 />
               ))
             ) : (

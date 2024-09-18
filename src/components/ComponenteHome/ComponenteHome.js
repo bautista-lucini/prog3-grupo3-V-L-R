@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Populares from "../Populares/Populares";
 import Cartelera from "../Cartelera/Cartelera";
 import MovieCard from "../MovieCard/MovieCard";
+import "./ComponenteHome.css"
 
 // Grid para cartelera 
 //Css
@@ -42,13 +43,13 @@ render(){
     return(
         <>
         <h1 className="titulo">Peliculas Populares</h1>
-        <section className="">
+        <section className="containerPeliculas">
         {
             this.state.arrayPopulares.map((unaPeli, idx)=> <MovieCard key={unaPeli.name + idx} datos={unaPeli}/>)
         }
         </section>
          <h2 className="">Peliculas en cartelera</h2>
-         <section  className="">
+         <section  className="containerPeliculas">
             {
                 this.state.arrayCartelera.map((unaPeliCarte, idx)=> <MovieCard key={unaPeliCarte.name + idx} datos={unaPeliCarte}/>)
             }
