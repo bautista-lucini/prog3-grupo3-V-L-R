@@ -9,6 +9,7 @@ import VerTodas from './pages/VerTodas';
 import Footer from "./components/Footer/Footer"
 import { Switch, Route} from 'react-router-dom';
 import ResultadosBuscador from './pages/ResultadosBuscador';
+import NotFound from './pages/NotFound';
 
 
 function App() {
@@ -16,16 +17,18 @@ function App() {
   return (
     <>
         <Header/>
+        
         <main>
           <Switch>
+
             <Route exact path= "/" component={ Home }/>
             <Route path= "/favoritos" component={ Favoritos }/>
             {/* <Route path= "/ver-todas" component={ VerTodas}/> lo dejo comentado.  */}
             <Route path= "/search" component={ ResultadosBuscador }/>
+            <Route component= {NotFound}/>
+
           </Switch>
         </main>
-        
-        
         
         <Footer />
       
