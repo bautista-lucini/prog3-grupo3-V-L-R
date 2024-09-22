@@ -1,6 +1,7 @@
 import { Component } from "react";
-// import { FaHeart } from "react-icons/fa";
-// import { FaRegHeart } from "react-icons/fa";
+import './Favoritos.css'; 
+import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 
 class Favoritos extends Component {
     constructor(props) {
@@ -59,7 +60,7 @@ class Favoritos extends Component {
         return (
             <div>
                 <button onClick={() => this.state.esFavorito ? this.sacarFavorito() : this.agregarFavorito() }>
-                    {/* {this.state.esFavorito ? <FaHeart size={20} /> : <FaRegHeart />} */}
+                {this.state.esFavorito ? <FaHeart size={20} /> : <FaRegHeart />}
                 </button>
             </div>
         );

@@ -11,6 +11,7 @@ const Home = (props) => {
       <main>
         <Buscador history={props.history}/>
         <ComponenteHome/>
+        
       </main>
     </>
   )

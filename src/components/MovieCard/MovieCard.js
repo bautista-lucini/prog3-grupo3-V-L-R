@@ -22,13 +22,15 @@ class MovieCard extends Component {
                     null : 
                     <p>{this.props.datos.overview}</p>
                 }
-                <button onClick={() => {this.setState({oculta : !this.state.oculta})}}> 
-                    Ver descripción
-                </button>
-                <Link to={`/peliculas/detallePelicula/id/${this.props.datos.id}`}>  
-                <button> Ir al detalle </button>
-                </Link>
-                <Favoritos  movie={this.props.datos} />
+                <div className="botones">
+                    <button onClick={() => {this.setState({oculta : !this.state.oculta})}}> 
+                        Ver descripción
+                    </button>
+                    <Link to={`/peliculas/detallePelicula/id/${this.props.datos.id}`}>  
+                        <button> Ir al detalle </button>
+                    </Link>
+                    <Favoritos  movie={this.props.datos} />
+                </div>
             </article>
         )
     }

@@ -45,28 +45,31 @@ class Favoritos extends Component {
 
   render() {
     return (
-      <div className='containerPeliculas'>
-        {!this.state.isLoading ? (
-          <section className="gridFavoritos">
-            {this.state.movies.length > 0 ? (
-              this.state.movies.map((movie) => (
-                <MovieCard
-                  key={movie.id}
-                  datos={movie} // Cambié title, desc, img e id por datos
-                />
-              ))
-            ) : (
-              <div className="textoFavoritos">
-                <p>No hay favoritos</p>
-              </div>
-            )}
-          </section>
-        ) : (
-          <div className="textoFavoritos">
-            <p>Cargando...</p>
-          </div>
-        )}
-      </div>
+      <section>
+        <h2 className="tituloFavorito">Favoritos</h2>
+       <div className='containerFavoritos'>
+         {!this.state.isLoading ? (
+           <section className="gridFavoritos">
+              {this.state.movies.length > 0 ? (
+                this.state.movies.map((movie) => (
+                  <MovieCard
+                    key={movie.id}
+                   datos={movie} // Cambié title, desc, img e id por datos
+                 />
+               ))
+              ) : (
+                <div className="textoFavoritos">
+                 <p>No hay favoritos</p>
+               </div>
+             )}
+           </section>
+         ) : (
+            <div className="textoFavoritos">
+              <p>Cargando...</p>
+            </div>
+         )}
+       </div>
+      </section>
     );
   }
 }

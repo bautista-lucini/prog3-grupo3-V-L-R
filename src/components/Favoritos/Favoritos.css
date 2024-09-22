@@ -1,0 +1,38 @@
+.containerFavoritos {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+  
+.gridFavoritos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 20px;
+  width: 100%;
+  border: 1px solid #d9ff96; 
+  margin: 10px 10px 10px 10px;
+}
+    
+.textoFavoritos {
+  text-align: center;
+  font-size: 18px; 
+  color: #555;
+  padding: 20px;
+}
+  
+.textoFavoritos p {
+  margin: 0;
+}
+  
+.gridFavoritos img {
+  width: 100%;
+  border-radius: 10px;
+}
+  
+.tituloFavorito{
+  margin: 20px 0px 0px 30px;
+  font-size:larger;
+}
