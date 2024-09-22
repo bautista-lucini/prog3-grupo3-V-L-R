@@ -1,7 +1,7 @@
 import { Component } from "react";
 import './Favoritos.css'; 
-// import { FaHeart } from "react-icons/fa";
-// import { FaRegHeart } from "react-icons/fa";
+import { FaHeart } from "react-icons/fa";
+import { FaRegHeart } from "react-icons/fa";
 
 class Favoritos extends Component {
     constructor(props) {
