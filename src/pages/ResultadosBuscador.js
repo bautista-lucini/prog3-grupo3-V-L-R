@@ -7,6 +7,7 @@ export class ResultadosBuscador extends Component {
         super(props)
         this.state = {
             resultado : [],
+            cargando : true,
         }
         
     }
@@ -23,7 +24,9 @@ export class ResultadosBuscador extends Component {
             <>
                <h2> Resultados de Busqueda: {this.props.location.state.query}</h2>
                {
-                    this.state.resultado.length === 0 ?
+                    this.state.resultado.length === 0 && this.state.cargando ?
+                    <p>Cargando...</p> : 
+                        this.state.resultado.length === 0 && !this.state.cargando ?
                         <p> No se encontraron resultados </p> :
                         this.state.resultado.map((unaPeli, idx) => <MovieCard key={unaPeli.name + idx} datos={unaPeli}/>)
                 }
