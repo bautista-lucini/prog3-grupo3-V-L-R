@@ -58,10 +58,8 @@ class Favoritos extends Component {
 
     render() {
         return (
-            <div>
-                <button onClick={() => this.state.esFavorito ? this.sacarFavorito() : this.agregarFavorito() }>
-                {/* {this.state.esFavorito ? <FaHeart size={20} /> : <FaRegHeart />} */}
-                </button>
+            <div onClick={() => this.state.esFavorito ? this.sacarFavorito() : this.agregarFavorito()}>
+                {this.state.esFavorito ? <FaHeart size={20} color="#c4ff61"/> : <FaRegHeart />}
             </div>
         );
     }
