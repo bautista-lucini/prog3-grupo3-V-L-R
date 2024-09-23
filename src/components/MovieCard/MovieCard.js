@@ -26,7 +26,7 @@ class MovieCard extends Component {
                     <button className="btn" onClick={() => {this.setState({oculta : !this.state.oculta})}}> 
                         {this.state.oculta ? 'Ver descripción' : 'Ocultar descripción'}
                     </button>
-                    <Link to={`/peliculas/detallePelicula/id/${this.props.datos.id}`}>  
+                    <Link to={`DetallePelicula/id/${this.props.datos.id}`}>  
                         <button className="btn"> Ir al detalle </button>
                     </Link>
                     <Favoritos  movie={this.props.datos} />
