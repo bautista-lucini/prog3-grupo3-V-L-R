@@ -27,3 +27,16 @@
     gap: 20px;
     border-radius: 10px;
 }
+
+.btn {
+    background-color: #111;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    color: #111;
+    background-color: white;
+}

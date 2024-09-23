@@ -1,6 +1,5 @@
 import { Component } from 'react';
 import MovieCard from '../components/MovieCard/MovieCard'; 
-import "../components/ComponenteHome/ComponenteHome.css"
 
 
 class Favoritos extends Component {
