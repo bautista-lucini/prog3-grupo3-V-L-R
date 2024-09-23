@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from "react";
+import "./Buscador.css"
 
 
 class Buscador extends Component {
@@ -28,7 +29,7 @@ class Buscador extends Component {
 
     render(){
         return(
-            <div>
+            <div className='buscador'>
                 <input onChange= {(e) => this.guardarCambios(e)} type= "text" name="query" value={this.state.query}/>
                 <button onClick={() => this.handleInputSubmit()}> Buscar pelicula</button>
             </div>

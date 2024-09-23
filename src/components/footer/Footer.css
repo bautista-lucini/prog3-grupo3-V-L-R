@@ -5,8 +5,8 @@ footer{
 }
 
 .footer-container{
-
     list-style: none;
     padding-right: 12px;
     color: silver;
+    background-color: black;
 }

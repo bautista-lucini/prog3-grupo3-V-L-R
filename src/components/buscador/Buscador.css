@@ -1,0 +1,31 @@
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para que el input y el botón se apilen verticalmente */
+  }
+
+.buscador input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px; /* Separación con el botón */
+    font-size: 16px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buscador button {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buscador button:hover {
+    background-color: grey;
+}

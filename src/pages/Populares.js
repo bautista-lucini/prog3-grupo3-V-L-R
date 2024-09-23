@@ -23,13 +23,16 @@ render(){
 
   return(
     <>
-    {
-      this.state.peliculas.length === 0 && this.state.cargando ?
-        <p>Cargando...</p> : 
-              this.state.peliculas.length === 0 && !this.state.cargando ?
-              <p> No se encontraron resultados </p> :
-              this.state.peliculas.map((unaPeli, idx) => <MovieCard key={unaPeli.name + idx} datos={unaPeli}/>)
-    }
+
+    <div className="movie-card">
+      {
+        this.state.peliculas.length === 0 && this.state.cargando ?
+          <p>Cargando...</p> : 
+                this.state.peliculas.length === 0 && !this.state.cargando ?
+                <p> No se encontraron resultados </p> :
+                this.state.peliculas.map((unaPeli, idx) => <MovieCard key={unaPeli.name + idx} datos={unaPeli}/>)
+      }
+    </div>
   </>
 )
 }

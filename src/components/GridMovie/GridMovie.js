@@ -38,7 +38,7 @@ componentDidMount(){
                     this.state.arrayMovies.map((unaPeli, idx) => <MovieCard key={unaPeli.name + idx} datos={unaPeli}/>)
                 }
                 </div>
-                <Link to={{pathname: this.props.link, state:{urlPelis: this.props.url}}}> <button>Ver todas </button> </Link>
+                <Link to={{pathname: this.props.link, state:{urlPelis: this.props.url}}}> <button className="btn">Ver todas </button> </Link>
             </>
         )
     }
