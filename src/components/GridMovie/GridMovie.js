@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MovieCard from "../MovieCard/MovieCard";
+import {Link} from "react-router-dom";
 
 class GridMovie extends Component{
     constructor(props) {
@@ -7,6 +8,7 @@ class GridMovie extends Component{
         this.state = {
             arrayMovies: [], 
             cargando: true,
+            urlPelis: ""
         }
 }
 
@@ -25,6 +27,7 @@ componentDidMount(){
         return (
             <>
                 <h2>{this.props.tipo}</h2>
+                <Link to={{pathname: this.props.link, state:{urlPelis: this.props.url}}}> Ver todas</Link>
                 {
                     this.state.arrayMovies.length === 0 && this.state.cargando ?
                     <p>Cargando...</p> : 
