@@ -13,18 +13,6 @@ class GridMovie extends Component{
 componentDidMount(){
     let endpoint = ''
 
-    if (this.props.tipo === "Peliculas Populares") {
-        endpoint = "https://api.themoviedb.org/3/movie/popular?api_key=8dea26e2efdb41e19def66c4e41362a9&language=en-US&page=1"
-
-    }
-    else if (this.props.tipo === "Peliculas Top Rated") {
-        endpoint = "https://api.themoviedb.org/3/movie/now_playing?api_key=8dea26e2efdb41e19def66c4e41362a9"
-
-    }
-    else {
-        console.log("Error. No existe la página ver todas de " + this.props.tipo)
-    }
-
     fetch (endpoint)
     .then(res => res.json())
             .then(data => this.setState({

@@ -38,6 +38,16 @@ cargarMasPeliculas(){
 
 }
 
+filtrado(palabra){
+    let filtradoArray = this.state.peliculas.filter(pelicula => pelicula.title.toLowerCase().includes(palabra.toLowerCase()) )
+
+    this.setState({
+        peliculasFiltradas: filtradoArray
+    })
+
+
+}
+
 
 render (){
     return(
