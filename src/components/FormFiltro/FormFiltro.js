@@ -17,7 +17,7 @@ class FormFiltro extends Component {
             input: evento.target.value,
         },
 
-        ()=> this.props.filtrado(this.state.value)
+        ()=> this.props.filtrado(this.state.input)
 
     
     )

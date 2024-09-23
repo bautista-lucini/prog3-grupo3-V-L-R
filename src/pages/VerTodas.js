@@ -26,7 +26,7 @@ componentDidMount(){
 }
 
 cargarMasPeliculas(){
-    let urlCargadas = `${this.state.urlPelis.split("&page=")[0]}&page=${this.state.nextPage +1}}`
+    let urlCargadas = `${this.state.urlPelis.split("&page=")[0]}&page=${this.state.nextPage + 1}`;
 
     fetch(urlCargadas)
     .then(res => res.json())
