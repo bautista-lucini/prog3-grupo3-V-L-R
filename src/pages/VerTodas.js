@@ -42,6 +42,17 @@ cargarMasPeliculas(){
 render (){
     return(
         <>
+
+        <FormFiltro filtrado={(palabra)=> this.filtrado(palabra)}/>
+
+        <div>
+            {
+                this.state.peliculasFiltradas.map((unapelicula, idx)=> <MovieCard key={unapelicula.name + idx} datos={unapelicula}/>  )
+            }
+        </div>
+
+            <button onClick={() => this.cargarMasPeliculas()}>Cargar más películas</button>
+
         
         </>
     )
