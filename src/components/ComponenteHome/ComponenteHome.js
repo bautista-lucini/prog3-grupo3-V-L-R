@@ -5,12 +5,6 @@ import Cartelera from "../Cartelera/Cartelera";
 import MovieCard from "../MovieCard/MovieCard";
 import "./ComponenteHome.css"
 
-// Grid para cartelera 
-//Css
-
-let popularesUrl =  "https://api.themoviedb.org/3/movie/popular?api_key=8dea26e2efdb41e19def66c4e41362a9&language=en-US&page=1"
-let carteleraUrl =  "https://api.themoviedb.org/3/movie/now_playing?api_key=8dea26e2efdb41e19def66c4e41362a9"
-
 class ComponenteHome extends Component {
     constructor(){
         super()
@@ -20,24 +14,22 @@ class ComponenteHome extends Component {
         }
     }
 
-    //Vamos a buscar la informacion con el fetch
 
     componentDidMount() {
         fetch(popularesUrl)
         .then(res => res.json())
         .then(data => this.setState({
-            arrayPopulares: data.results
+            arrayPopulares: data.results.slice(0,5)
         })).catch()
 
         fetch(carteleraUrl)
         .then(res => res.json())
         .then(data => this.setState({
-            arrayCartelera: data.results
+            arrayCartelera: data.results.slice(0,5)
         })).catch()
 
     }
 
-//Vamos a renderizar la informacion
 
 render(){
     return(
