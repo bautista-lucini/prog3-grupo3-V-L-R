@@ -52,7 +52,7 @@ filtrado(palabra){
 render (){
     return(
         <>
-
+        <h2>Peliculas</h2>
         <FormFiltro filtrado={(palabra)=> this.filtrado(palabra)}/>
 
         <div>

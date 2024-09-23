@@ -27,7 +27,7 @@ componentDidMount(){
         return (
             <>
                 <h2>{this.props.tipo}</h2>
-                <Link to={{pathname: this.props.link, state:{urlPelis: this.props.url}}}> Ver todas</Link>
+                <Link to={{pathname: this.props.link, state:{urlPelis: this.props.url}}}> <button>Ver todas </button> </Link>
                 {
                     this.state.arrayMovies.length === 0 && this.state.cargando ?
                     <p>Cargando...</p> : 
