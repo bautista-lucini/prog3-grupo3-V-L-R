@@ -39,20 +39,25 @@ class DetallePelicula extends Component {
         }
 
         return (
-            <section className="">
-                <div className="DetallePoster">
-                    <h3>{movie.title}</h3>
-                    <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
-                    <p>Rating: {movie.popularity}</p>
-                    <p>Estreno: {movie.release_date}</p>
-                    <p>Duracion: {movie.runtime}</p>
-                    <p>Sinopsis: {movie.overview}</p>
-                    <p>Géneros: {generos.map(genre => genre.name).join(', ')}</p>
-                    {/* <Favoritos  movie={this.props.datos} />*/}
-
-                </div>          
+            <section className="detallePelicula">
+                <div className="detalleContenido">
+                    <div className="detalleImagenCcontainer">
+                        <img className="detalleImagen" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+                    </div>
+                    <div className="infoContainer">
+                        <h3 className="detalleTitulo">{movie.title}</h3>
+                        <p className="detalleInfo"><strong>Rating:</strong> {movie.popularity}</p>
+                        <p className="detalleInfo"><strong>Estreno:</strong> {movie.release_date}</p>
+                        <p className="detalleInfo"><strong>Duración:</strong> {movie.runtime} minutos</p>
+                        <p className="detalleInfo"><strong>Sinopsis:</strong> {movie.overview}</p>
+                        <p className="detalleInfo"><strong>Géneros:</strong> {generos.map(genre => genre.name).join(', ')}</p>
+                        <Favoritos movie={movie} />
+                    </div>
+                </div>
             </section>
-        )
+        );
+        
+        
     }
 
 }
