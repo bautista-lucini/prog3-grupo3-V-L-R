@@ -61,9 +61,9 @@ render (){
                     this.state.peliculasFiltradas.map((unapelicula, idx)=> <MovieCard key={unapelicula.name + idx} datos={unapelicula}/>  )
                 }
            </div>
-
-                <button onClick={() => this.cargarMasPeliculas()}>Cargar más películas</button>
-
+           
+                <button className="btn" onClick={() => this.cargarMasPeliculas()}>Cargar más películas</button>
+            
         
         </>
     )
