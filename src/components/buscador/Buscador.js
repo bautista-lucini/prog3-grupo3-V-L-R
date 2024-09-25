@@ -30,6 +30,7 @@ class Buscador extends Component {
     render(){
         return(
             <div className='buscador'>
+            
                 <input onChange= {(e) => this.guardarCambios(e)} type= "text" name="query" value={this.state.query}/>
                 <button onClick={() => this.handleInputSubmit()}> Buscar pelicula</button>
             </div>

@@ -53,15 +53,16 @@ render (){
     return(
         <>
         <h2>Peliculas</h2>
-        <FormFiltro filtrado={(palabra)=> this.filtrado(palabra)}/>
+        
+            <FormFiltro filtrado={(palabra)=> this.filtrado(palabra)}/>
 
-        <div>
-            {
-                this.state.peliculasFiltradas.map((unapelicula, idx)=> <MovieCard key={unapelicula.name + idx} datos={unapelicula}/>  )
-            }
-        </div>
+            <div className='containerPopulares'>
+                {
+                    this.state.peliculasFiltradas.map((unapelicula, idx)=> <MovieCard key={unapelicula.name + idx} datos={unapelicula}/>  )
+                }
+           </div>
 
-            <button onClick={() => this.cargarMasPeliculas()}>Cargar más películas</button>
+                <button onClick={() => this.cargarMasPeliculas()}>Cargar más películas</button>
 
         
         </>
