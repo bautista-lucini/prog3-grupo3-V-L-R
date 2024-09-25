@@ -1,6 +1,7 @@
 import React from 'react';
 import {Component} from "react";
 import MovieCard from '../components/MovieCard/MovieCard';
+import "../index.css"
 
 class Populares extends Component{
   constructor(props){
@@ -23,14 +24,14 @@ render(){
 
   return(
     <>
-
-    <div className="movie-card">
+     <h2 className="tituloPopulares">Populares</h2>
+    <div className='containerPopulares'>
       {
         this.state.peliculas.length === 0 && this.state.cargando ?
           <p>Cargando...</p> : 
                 this.state.peliculas.length === 0 && !this.state.cargando ?
                 <p> No se encontraron resultados </p> :
-                this.state.peliculas.map((unaPeli, idx) => <MovieCard key={unaPeli.name + idx} datos={unaPeli}/>)
+                this.state.peliculas.map((unaPeli, idx) => <MovieCard key={unaPeli.name + idx} datos={unaPeli} className="movieCard"/>)
       }
     </div>
   </>
