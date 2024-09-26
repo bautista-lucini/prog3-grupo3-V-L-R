@@ -11,7 +11,7 @@ constructor(props){
         peliculas: [],
         peliculasFiltradas: [],
         nextPage: "" ,
-        urlPelis: this.props.location.state.urlPelis
+        urlPelis: this.props.urlPelis
     }
 }
 

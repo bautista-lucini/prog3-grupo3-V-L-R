@@ -25,7 +25,6 @@ function App() {
 
             <Route exact path= "/" component={ Home }/>
             <Route path= "/favoritos" component={ Favoritos }/>
-            <Route path= "/verTodas" component={ VerTodas }/>
             <Route path= "/populares" component={ Populares }/>
             <Route path="/cartelera" component={Cartelera} />
             <Route path= "/search" component={ ResultadosBuscador }/>
