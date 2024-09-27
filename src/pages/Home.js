@@ -1,6 +1,6 @@
 import React from 'react'
 import "../App.css"
-import Buscador from '../components/buscador/Buscador'
+import Buscador from '../components/Buscador/Buscador'
 import GridMovie from '../components/GridMovie/GridMovie'
 
 const Home = (props) => {

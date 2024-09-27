@@ -1,6 +1,5 @@
 import React from "react";
 import {Component} from "react";
-import GridMovie from "../components/GridMovie/GridMovie";
 import FormFiltro from "../components/FormFiltro/FormFiltro";
 import MovieCard from "../components/MovieCard/MovieCard";
 
@@ -11,7 +10,8 @@ constructor(props){
         peliculas: [],
         peliculasFiltradas: [],
         nextPage: "" ,
-        urlPelis: this.props.urlPelis
+        urlPelis: this.props.urlPelis,
+        cargando: true,
     }
 }
 
@@ -21,8 +21,11 @@ componentDidMount(){
     .then(data => this.setState({
         peliculas: data.results,
         peliculasFiltradas: data.results,
-        nextPage: data.page
-    })) .catch()
+        nextPage: data.page,
+        cargando: false,
+    })
+    ) 
+    .catch()
 }
 
 cargarMasPeliculas(){
@@ -58,7 +61,11 @@ render (){
 
             <div className='containerPopulares'>
                 {
-                    this.state.peliculasFiltradas.map((unapelicula, idx)=> <MovieCard key={unapelicula.name + idx} datos={unapelicula}/>  )
+                     this.state.peliculasFiltradas.length === 0 && this.state.cargando ? 
+                        <p>Cargando...</p> : 
+                        this.state.peliculasFiltradas.length === 0  && !this.state.cargando? 
+                            <p>No se encontraron películas</p> : 
+                            this.state.peliculasFiltradas.map((unapelicula, idx)=> <MovieCard key={unapelicula.name + idx} datos={unapelicula} className='movieCard'/>)
                 }
            </div>
            
