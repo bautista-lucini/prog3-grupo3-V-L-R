@@ -1,4 +1,4 @@
-.containerFavoritos {
+.container_favoritos {
   display: flex;
   flex-direction: column;   
   align-items: center;
@@ -9,7 +9,7 @@
   max-width: 1250px; 
 }
 
-.gridFavoritos {
+.grid_favoritos {
   display: flex;
   flex-wrap: wrap;
   justify-content: center; 
@@ -18,17 +18,16 @@
   padding: 10px;
 }
 
-.textoFavoritos {
+.texto_favoritos {
   text-align: center;
   font-size: 18px; 
   color: #c4ff61; 
   padding: 10px;
 }
 
-.tituloFavorito {
+.titulo_favorito {
   margin: 10px 0px;
   font-size: 40px; 
   color: #fff;
   text-align: center;
 }
-

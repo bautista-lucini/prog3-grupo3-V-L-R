@@ -1,8 +1,8 @@
-.containerPopulares {
+.container_populares {
     display: flex;
-    flex-direction: row; /* Cambiado a 'row' para alinear en filas */
-    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente fila si no caben */
-    justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-around;
     align-items: flex-start;
     padding: 20px;
     margin: 0 auto;
@@ -11,15 +11,15 @@
     max-width: 1250px;
 }
   
-.tituloPopulares {
+.titulo_populares {
     margin: 10px 0px;
     font-size: 40px; 
     color: #fff;
     text-align: center;
 }
 
-.movieCard {
-    width: 250px; /* Ajusta el ancho de cada tarjeta */
+.movie_card {
+    width: 250px; 
     margin: 15px;
     background-color: #444;
     border-radius: 8px;

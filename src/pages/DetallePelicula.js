@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import DetallePelicula from '../components/DetallePelicula/DetallePelicula.js';
 
 class DetallePeliculaPage extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const { match } = this.props;

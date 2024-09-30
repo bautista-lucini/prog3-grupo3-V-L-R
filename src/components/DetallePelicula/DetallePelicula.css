@@ -1,4 +1,4 @@
-.detallePelicula {
+.detalle_pelicula {
     padding: 20px;
     max-width: 1000px;
     margin: 0 auto;
@@ -8,42 +8,42 @@
     margin: 15px;
 }
 
-.detalleContenido {
+.detalle_contenido {
     display: flex;
     flex-direction: row;
     gap: 20px; 
     align-items: flex-start;
 }
 
-.detalleImagenCcontainer {
+.detalle_imagen_container {
     width: 30%; 
 }
 
-.detalleImagen {
+.detalle_imagen {
     width: 100%;
     border-radius: 8px;
 }
 
-.infoContainer {
+.info_container {
     width: 60%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.detalleTitulo {
+.detalle_titulo {
     font-size: 40px;
     margin-bottom: 10px;
     color: white;
 }
 
-.detalleInfo {
+.detalle_info {
     font-size: 18px;
     color: #ccc;
     margin-bottom: 10px;
 }
 
-.detalleInfo strong {
+.detalle_info strong {
     color: #fff;
     font-weight: bold;
 }

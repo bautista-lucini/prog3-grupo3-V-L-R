@@ -3,7 +3,6 @@ import React from 'react';
 import Header from "./components/Header/Header";
 import Home from "./pages/Home";
 import Favoritos from "./pages/Favoritos";
-import VerTodas from './pages/VerTodas';
 import Populares from "./pages/Populares";
 import Cartelera from "./pages/Cartelera";
 import Footer from "./components/Footer/Footer"

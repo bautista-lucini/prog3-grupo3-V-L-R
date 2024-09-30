@@ -10,7 +10,6 @@ class Favoritos extends Component {
             esFavorito: false,
         };
     }
-
     componentDidMount() {
         const storage = localStorage.getItem("favoritos");
         if (storage !== null) {
@@ -21,7 +20,6 @@ class Favoritos extends Component {
             });
         }
     }
-
     agregarFavorito = () => {
         const storage = localStorage.getItem("favoritos");
         let parsedArray = [];
@@ -29,7 +27,6 @@ class Favoritos extends Component {
         if (storage !== null) {
             parsedArray = JSON.parse(storage);
         }
-
         parsedArray.push(this.props.movie.id);
         const stringArray = JSON.stringify(parsedArray);
         localStorage.setItem("favoritos", stringArray);
@@ -38,7 +35,6 @@ class Favoritos extends Component {
             esFavorito: true
         });
     };
-
     sacarFavorito = () => {
         const storage = localStorage.getItem("favoritos");
         let parsedArray = [];
@@ -55,7 +51,6 @@ class Favoritos extends Component {
             esFavorito: false
         });
     };
-
     render() {
         return (
             <div onClick={() => this.state.esFavorito ? this.sacarFavorito() : this.agregarFavorito()}>

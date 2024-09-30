@@ -1,7 +1,6 @@
 import { Component } from 'react';
 import MovieCard from '../components/MovieCard/MovieCard'; 
 
-
 class Favoritos extends Component {
   constructor(props) {
     super(props);
@@ -13,19 +12,17 @@ class Favoritos extends Component {
 
   componentDidMount() {
     const storage = localStorage.getItem('favoritos');
-    
+
     if (storage !== null) {
       const parsedArray = JSON.parse(storage);
 
       Promise.all(
         parsedArray.map((id) => 
-          fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=8dea26e2efdb41e19def66c4e41362a9&language=en-US
-`) 
+          fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=8dea26e2efdb41e19def66c4e41362a9&language=en-US`) 
             .then(response => response.json())
         )
       )
       .then((movies) => {
-        console.log(movies); 
         this.setState({
           movies: movies, 
           isLoading: false 
@@ -45,25 +42,25 @@ class Favoritos extends Component {
   render() {
     return (
       <section>
-        <h2 className="tituloFavorito">Favoritos</h2>
-       <div className='containerFavoritos'>
+        <h2 className="titulo_favorito">Favoritos</h2>
+       <div className='container_favoritos'>
          {!this.state.isLoading ? (
-           <section className="gridFavoritos">
+           <section className="grid_favoritos">
               {this.state.movies.length > 0 ? (
                 this.state.movies.map((movie) => (
                   <MovieCard
                     key={movie.id}
-                   datos={movie} // Cambié title, desc, img e id por datos
+                    datos={movie} // Cambié title, desc, img e id por datos
                  />
                ))
               ) : (
-                <div className="textoFavoritos">
+                <div className="texto_favoritos">
                  <p>No hay favoritos</p>
                </div>
              )}
            </section>
          ) : (
-            <div className="textoFavoritos">
+            <div className="texto_favoritos">
               <p>Cargando...</p>
             </div>
          )}

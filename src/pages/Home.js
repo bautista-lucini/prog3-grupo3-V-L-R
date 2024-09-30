@@ -1,12 +1,13 @@
 import React from 'react'
 import "../App.css"
-import Buscador from '../components/Buscador/Buscador'
+import Buscador from '../components/buscador/Buscador'
 import GridMovie from '../components/GridMovie/GridMovie'
 
 const Home = (props) => {
   return (
     <>
-      <h1 className='tituloPopulares'> Películas </h1>
+      <br/>
+      <br/>
       <main>
         <Buscador history={props.history}/>
         <GridMovie link={"/populares"} tipo={"Peliculas Populares"} url={"https://api.themoviedb.org/3/movie/popular?api_key=8dea26e2efdb41e19def66c4e41362a9&language=en-US&page=1"}/>
