@@ -23,14 +23,14 @@ export class ResultadosBuscador extends Component {
         return (
             <>
                <h2> Resultados de Busqueda: {this.props.location.state.query}</h2>
-               <div className='containerPopulares'>
+               <div className='container_populares'>
                
                {
                     this.state.resultado.length === 0 && this.state.cargando ?
                     <p>Cargando...</p> : 
                         this.state.resultado.length === 0 && !this.state.cargando ?
                         <p> No se encontraron resultados </p> :
-                        this.state.resultado.map((unaPeli, idx) => <MovieCard key={unaPeli.name + idx} datos={unaPeli} className='movieCard'/>)
+                        this.state.resultado.map((unaPeli, idx) => <MovieCard key={unaPeli.name + idx} datos={unaPeli} className='movie_card'/>)
                 }
                 </div>
             </>

@@ -59,13 +59,13 @@ render (){
         
             <FormFiltro filtrado={(palabra)=> this.filtrado(palabra)}/>
 
-            <div className='containerPopulares'>
+            <div className='container_populares'>
                 {
                      this.state.peliculasFiltradas.length === 0 && this.state.cargando ? 
                         <p>Cargando...</p> : 
                         this.state.peliculasFiltradas.length === 0  && !this.state.cargando? 
                             <p>No se encontraron películas</p> : 
-                            this.state.peliculasFiltradas.map((unapelicula, idx)=> <MovieCard key={unapelicula.name + idx} datos={unapelicula} className='movieCard'/>)
+                            this.state.peliculasFiltradas.map((unapelicula, idx)=> <MovieCard key={unapelicula.name + idx} datos={unapelicula} className='movie_card'/>)
                 }
            </div>
            

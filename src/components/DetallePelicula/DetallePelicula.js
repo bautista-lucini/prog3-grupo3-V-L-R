@@ -26,11 +26,20 @@ class DetallePelicula extends Component {
     }
     render() {
         const { movie, loading, generos } = this.state;
+        
         if (loading) {
-            return <p>Loading...</p>; // VICKYYY reemplazar esto con nuestro loader
+                return (
+                    <div className="loader">
+                        <p>Cargando...</p>
+                    </div>
+            );
         }
         if (!movie) {
-            return <p>No se encontró la película.</p>; 
+            return (
+                <div className="no_result">
+                    <p>No se encontró la película.</p>
+                </div>
+            );
         }
         return (
             <section className="detalle_pelicula">
